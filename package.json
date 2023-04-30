@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "discord.js": "^14.9.0",
+    "dotenv": "^16.0.3",
+    "mongoose": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "name": "acronix-utils-bot",
+  "description": "The Utils Bot for the Support Server",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/index",
+    "build": "tsc",
+    "bot": "tsc && node dist/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AcronixBot/acronix-utils-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AcronixBot/acronix-utils-bot/issues"
+  },
+  "homepage": "https://github.com/AcronixBot/acronix-utils-bot#readme"
+}

@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "ES2021",
+      "module": "ES2022",
+      "strict": false,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "sourceMap": false,
+      "outDir": "dist/",
+      "baseUrl": ".",
+    },
+    "include": [
+      "src"
+    ],
+  }
