@@ -12,38 +12,53 @@ const event: IGatewayEvent = {
 
             let lastBotMessage = channel.messages.cache.get(process.env.PresenceLogMessageId);
             if(!lastBotMessage) lastBotMessage = await (await channel.messages.fetch()).get(process.env.PresenceLogMessageId);
-            if(!lastBotMessage) lastBotMessage = await channel.send(`Placeholder Status Message`)
+            if(!lastBotMessage) lastBotMessage = await channel.send({embeds:[new EmbedBuilder().setColor('Red').setDescription(`Status Embed Placeholder`)]})
             
             let statusEmbed = new EmbedBuilder()
             .setTitle(`Bot Status`)
-            .setDescription(`${newPresence.user.username}'s Status is ${newPresence.status}`)
+            .setDescription(`${newPresence.user.username}'s Status ist ${newPresence.status}`)
 
             switch (newPresence.status) {
                 case ('online'): {
-                    lastBotMessage.edit({embeds:[
-                        statusEmbed.setThumbnail(`<urlToGreenSymbole>`).setColor('Green')
+                    return lastBotMessage.edit({embeds:[
+                        statusEmbed
+                        .setThumbnail(`https://cdn.discordapp.com/attachments/963863032184836146/1102643105930432532/online.png`)
+                        .setColor('Green')
+                        .setDescription(`Last Change: <t:${Date.now() / 1000 | 0}>`)
                     ]})
                 }
                 case ('dnd'): {
-                    lastBotMessage.edit({embeds:[
-                        statusEmbed.setThumbnail(`<urlToRedSymbole>`).setColor('Red')
+                    return lastBotMessage.edit({embeds:[
+                        statusEmbed
+                        .setThumbnail(`https://cdn.discordapp.com/attachments/963863032184836146/1102643105506787410/dnd.png`)
+                        .setColor('Red')
+                        .setDescription(`Last Change: <t:${Date.now() / 1000 | 0}>`)
                     ]})
                 }
                 case ('idle'): {
-                    lastBotMessage.edit({embeds:[
-                        statusEmbed.setThumbnail(`<urlToOrangeSymbole>`).setColor('Orange')
+                    return lastBotMessage.edit({embeds:[
+                        statusEmbed
+                        .setThumbnail(`https://cdn.discordapp.com/attachments/963863032184836146/1102643105716514947/idle.png`)
+                        .setColor('Orange')
+                        .setDescription(`Last Change: <t:${Date.now() / 1000 | 0}>`)
                     ]})
                 }
                 //Same as offline
                 case ('invisible'): {
-                    lastBotMessage.edit({embeds:[
-                        statusEmbed.setThumbnail(`<urlToGreySymbole>`).setColor('Grey')
+                    return lastBotMessage.edit({embeds:[
+                        statusEmbed
+                        .setThumbnail(`https://cdn.discordapp.com/attachments/963863032184836146/1102643105288704082/offline.png`)
+                        .setColor('Grey')
+                        .setDescription(`Last Change: <t:${Date.now() / 1000 | 0}>`)
                     ]})
                 }
                 //Same as invisible
                 case ('offline'): {
-                    lastBotMessage.edit({embeds:[
-                        statusEmbed.setThumbnail(`<urlToGreySymbole>`).setColor('Grey')
+                    return lastBotMessage.edit({embeds:[
+                        statusEmbed
+                        .setThumbnail(`https://cdn.discordapp.com/attachments/963863032184836146/1102643105288704082/offline.png`)
+                        .setColor('Grey')
+                        .setDescription(`Last Change: <t:${Date.now() / 1000 | 0}>`)
                     ]})
                 }
             }

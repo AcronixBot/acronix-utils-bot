@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv'
 import { BotClient } from './Base/Client.js';
-import { catchCommands, loadEvents } from './Base/Loaders.js'
+import { catchTextCommands, pushCommands, loadEvents } from './Base/Loaders.js'
 import { connect } from 'mongoose';
 dotenv.config()
 
@@ -10,9 +10,11 @@ export const client = new BotClient();
 client.login(process.env.TOKEN).then((token) => console.log(`[BOT] Bot hat sich eingeloggt.`));
 
 client.on('ready', async () => {
-    catchCommands(client)
+    catchTextCommands(client)
+    pushCommands(client)
+
     loadEvents();
-    connect(process.env.MONGODB).then(() => console.log(`[DATABASE] Connected to Database`))
+    connect(process.env.MONGODB).then(() => console.log(`[DATABASE] Verbunden mit der Datenbank`))
 })
 
 

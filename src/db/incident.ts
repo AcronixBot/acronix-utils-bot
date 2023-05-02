@@ -7,6 +7,13 @@ export enum Status {
     RESOLVED = "Resolved"
 }
 
+export interface updateOptions {
+    status: Status,
+    investigating?: number,
+    monitoring?: number,
+    update?: number,
+    resolved?: number,
+}
 
 let schema = new Schema({
     messageId: String,

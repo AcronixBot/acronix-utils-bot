@@ -3,8 +3,8 @@ import { ITextCommand } from "../Base/Structures.js";
 
 const command: ITextCommand = {
     data: {
-        name: 'welcomeInfoMessage',
-        alias: ['test'],
+        name: 'welcomeinfomessage',
+        alias: ['wim'],
         ownerOnly: true
     },
     execute: async (client, message, args) => {
@@ -13,8 +13,7 @@ const command: ITextCommand = {
 
             let embed = new EmbedBuilder()
                 .setThumbnail(message.guild.iconURL())
-                .setTitle(`Willkommen <emoji>`)
-                .setDescription(`Herzlich Willkommen auf diesem Server. Schön das du her gefunden hast.\n\nHier über dieses Menü könnt ihr eine kleine Übersicht über Rollen, Regeln und Kanäle finden.`)
+                .setDescription(`**Willkommen** <a:wave_hey:1102972211775684688>\n\nHerzlich Willkommen auf diesem Server. Schön das du her gefunden hast.\n\nHier über dieses Menü könnt ihr eine kleine Übersicht über Rollen, Regeln und Kanäle finden.`)
                 .setColor(`#56a4e7`)
 
             let SelectMenuActionRow = new ActionRowBuilder<StringSelectMenuBuilder>()

@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, ChatInputCommandInteraction, Message, type PermissionResolvable } from "discord.js"
+import { SlashCommandBuilder, ChatInputCommandInteraction, Message, type PermissionResolvable, AutocompleteInteraction, CacheType } from "discord.js"
 import { BotClient } from "./Client.js"
 
 export interface ITextCommandData {
@@ -7,6 +7,12 @@ export interface ITextCommandData {
     ownerOnly?: boolean,
     userPerms?: PermissionResolvable,
     botPerms?: PermissionResolvable
+}
+
+export interface ISlashCommand {
+    data:SlashCommandBuilder | any,
+    execute: (client: BotClient, interaction: ChatInputCommandInteraction) => void,
+    autoComplete?: (client: BotClient, interaction: AutocompleteInteraction<CacheType>) => void,
 }
 
 export interface ITextCommand {
