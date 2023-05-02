@@ -2,9 +2,11 @@
   "dependencies": {
     "discord.js": "^14.9.0",
     "dotenv": "^16.0.3",
+    "glob": "^8.1.0",
     "mongoose": "^7.1.0"
   },
   "devDependencies": {
+    "@types/glob": "^8.1.0",
     "@types/node": "^18.16.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
@@ -24,7 +26,7 @@
     "url": "git+https://github.com/AcronixBot/acronix-utils-bot.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Voroniyx",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/AcronixBot/acronix-utils-bot/issues"
