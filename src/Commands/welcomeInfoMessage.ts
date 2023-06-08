@@ -26,17 +26,17 @@ const command: ITextCommand = {
                         .setOptions([
                             new StringSelectMenuOptionBuilder()
                                 .setDescription(`Siehe dir die Regeln des Servers an`)
-                                .setEmoji(`1101586392401838190`)
+                                .setEmoji(`1103027056742244395`)
                                 .setLabel(`Regeln`)
                                 .setValue(`info:menu:regeln`),
                             new StringSelectMenuOptionBuilder()
                                 .setDescription(`Eine Übersicht über die Rollen dieses Servers`)
-                                .setEmoji(`1101585872836640878`)
+                                .setEmoji(`1103027407092453479`)
                                 .setLabel(`Rollen`)
                                 .setValue(`info:menu:rollen`),
                             new StringSelectMenuOptionBuilder()
                                 .setDescription(`Eine Übersicht über die Kanäle dieses Servers`)
-                                .setEmoji(`1101585865664385105`)
+                                .setEmoji(`1103027015348662353`)
                                 .setLabel(`Kanäle`)
                                 .setValue(`info:menu:kanäle`)
                         ])
@@ -47,12 +47,12 @@ const command: ITextCommand = {
                     new ButtonBuilder()
                         .setStyle(ButtonStyle.Link)
                         .setLabel(`Lade Acronix ein`)
-                        .setEmoji(`1101585862271176745`)
+                        .setEmoji(`1103027402466136134`)
                         .setURL(`https://canary.discord.com/api/oauth2/authorize?client_id=905083832695398481&permissions=1376537373730&scope=bot%20applications.commands`),
                     new ButtonBuilder()
                         .setStyle(ButtonStyle.Link)
                         .setLabel(`Invite für hier`)
-                        .setEmoji(`1101585863642722324`)
+                        .setEmoji(`1103027036127232081`)
                         .setURL(`https://discord.gg/sj3ZTNn9d7`)
                 ])
 
@@ -61,7 +61,7 @@ const command: ITextCommand = {
                     new ButtonBuilder()
                         .setStyle(ButtonStyle.Link)
                         .setLabel(`App Verzeichnis`)
-                        .setEmoji(`1101585842973184232`)
+                        .setEmoji(`1103027014136500254`)
                         .setURL(`discord://-/application-directory/905083832695398481`)
                 ])
 

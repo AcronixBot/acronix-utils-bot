@@ -55,8 +55,13 @@ const event: IGatewayEvent = {
                                     .setTitle('Rollen')
                                     .addFields([
                                         {
+                                            name: "Verwaltung",
+                                            value: "<@&1104716831312326666> verwaltet Acronix und den Server.",
+                                            inline: false
+                                        },
+                                        {
                                             name: "Team",
-                                            value: "Für alle die in irgendeiner Art und Weise dem Server oder <@905083832695398481> bei der Entwicklung helfen",
+                                            value: "Für alle die in irgendeiner Art und Weise dem Server oder <@905083832695398481> bei der Entwicklung helfen.",
                                             inline: false
                                         },
                                         {
@@ -230,7 +235,7 @@ const event: IGatewayEvent = {
 
                 let channel = await client.channels.fetch(process.env.WelcomeInfoButtonLogChannel) as TextChannel;
                 channel.send({ embeds: [embed] })
-                return interaction.reply({ ephemeral: true, content: `Die Bwewerbung wurde weiter geleitet` })
+                return interaction.reply({ ephemeral: true, content: `Die Bewerbung wurde weiter geleitet` })
             }
         }
 
